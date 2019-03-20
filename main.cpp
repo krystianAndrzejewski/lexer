@@ -1,6 +1,7 @@
 #include "Lexer.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 
 int main(char **argc, int argv)
@@ -27,5 +28,21 @@ int main(char **argc, int argv)
 			std::cout << "No. " << result.getIndex() << " -> " << tokenMatch << "\n";
 		}
 	} while (isEnd == false && offset < input.length());
+
+	std::stringstream stream;
+	stream << "aallo toto \n 12432    ";
+	isEnd = false;
+	do {
+		auto result = lexer.match(stream);
+		if (result.isEmpty())
+		{
+			isEnd = true;
+		}
+		else
+		{
+			auto &tokenMatch = result.getResult();
+			std::cout << "No. " << result.getIndex() << " -> " << tokenMatch << "\n";
+		}
+	} while (isEnd == false);
     return 0;
 }
