@@ -8,7 +8,7 @@
 ## Description
 This project allows to create a simple lexer based on information which are obtained from grammar rules. A defined lexer can be used to process a text using lexical analysis. 
 An output from the analysis is a sequence of definded tokens. The information can be used as input to a parser that processes results of the lexer. Tokens are produced from 
-the lexer based on the longest match rule.
+the lexer based on the longest match rule (match groups algorithm based on the article https://www.labs.hpe.com/techreports/2012/HPL-2012-41R1.pdf).
 	
 ## Requirements
 * programming language compiler: C++11
