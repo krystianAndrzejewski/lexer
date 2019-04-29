@@ -24,7 +24,7 @@ cmake -H. -Bbuild -G <generator_name:"Visual Studio 14 2015 Win64">
 ```
 
 ## Usage
-An example of usage the project is defined in main.cpp. A regular expression has a special syntax (is practically coherent with other regExp implementation) and can be assembled from the operators 
+An example of the project usage is defined in main.cpp. A regular expression has a special syntax (is practically coherent with other regExp implementation) and can be assembled from the operators 
 (all operators produces a regular expression that can be combined with other regular expression):
 * <ascii_character> - a basic operator that is defined as a translation (input character must match the value of the operarator),
 * [<ascii_character>-<ascii_character><ascii_character>(...)] - a multi-basic operator that is represented by one or more ascii character that must match the operator (dash operator takes two neighboring ascii characters and allows to get all characters from created range between the characters),
