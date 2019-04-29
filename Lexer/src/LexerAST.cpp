@@ -4,7 +4,7 @@
 
 LexerAST::LexerAST() : numGroups(1), isCompiled(false)
 {
-	std::string escapeSign = "\\()+*|[]";
+	std::string escapeSign = "\\()+*|[";
 	greedyRegex = true;
 }
 
